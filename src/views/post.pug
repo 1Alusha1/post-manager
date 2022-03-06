@@ -1,0 +1,15 @@
+extends ../layouts/main.pug
+include ../components/btn.pug
+block content
+    .posts
+        .post(data-id= post.id)
+            .post__author= post.author
+            .post__name= post.name
+            .post__body= post.text
+            .post__control 
+                .post__control-remove
+                    +btn('/','Удалить','remove-post danger')
+                .post__control-edit 
+                    +btn('/','Изменить','change-post warning')
+                    +btn('/','Сохранить','save-post success hide')
+    script(src="/post.js" type="module") 

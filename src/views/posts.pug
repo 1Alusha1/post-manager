@@ -1,0 +1,9 @@
+extends ../layouts/main.pug
+block content 
+    .posts
+        each item,idx in posts
+            .post(data-id=idx) 
+                .post__name= item.name
+                .post__author= item.author
+                .post__body= item.text  
+    script(src="posts.js" type="module") 
