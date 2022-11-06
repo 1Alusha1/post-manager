@@ -62,4 +62,4 @@ app.get("/post-remove", (req, res) => {
 //   res.status(404).render("404");
 // });
 
-app.listen(3000, () => console.log("Server was started"));
+app.listen(3000 || process.env.PORT, () => console.log("Server was started"));
